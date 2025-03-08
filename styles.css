@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background-color: #2e2e2e;
+    background-color: #fff; /* White background */
     margin: 0;
     padding: 0;
-    color: white;
+    color: #333; /* Dark text color for better readability */
 }
 
 nav {
-    background-color: #3a3a3a;
-    padding: 20px 20px;
+    background-color: #000; /* Black background for the nav */
+    padding: 20px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     position: relative;
@@ -18,7 +17,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #ff69b4; /* Pink color for the links */
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
@@ -26,31 +25,32 @@ nav a {
 }
 
 nav a:hover {
-    color: #bbbbbb;
+    color: #ff1493; /* Darker pink on hover */
 }
 
 section {
     padding: 50px 20px;
-    background-color: #444;
-    color: white;
+    background-color: #f0f0f0; /* Light gray background for sections */
+    color: #333; /* Dark text for better readability */
     text-align: center;
 }
 
 h2 {
     font-size: 30px;
     margin-bottom: 20px;
+    color: #000; /* Black text for section headers */
 }
 
 #about-me {
-    background-color: #555;
+    background-color: #ffe0f0; /* Soft pink background for About Me */
 }
 
 #tech-stack {
-    background-color: #666;
+    background-color: #ffccff; /* Light pink background for Tech Stack */
 }
 
 #contact-me {
-    background-color: #555;
+    background-color: #ffe0f0; /* Soft pink background for Contact Me */
 }
 
 #home img {
@@ -60,19 +60,42 @@ h2 {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid white;
+    border: 4px solid #ff69b4; /* Pink border around profile image */
 }
 
-.intro-text {
-    text-align: center;
-    max-width: 600px;
-    margin: 20px auto;
-    font-size: 16px;
+/* This will make the entire body take at least 100% of the viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
+/* Body styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Other sections in your page */
+section {
+    flex: 1; /* This makes sure the section takes up available space */
+}
+
+/* Footer styling */
 footer {
-    background-color: #3a3a3a;
+    background-color: #000; /* Black footer background */
     text-align: center;
     padding: 10px;
-    color: white;
+    color: #fff; /* White text for footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
 }

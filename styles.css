@@ -20,13 +20,6 @@ nav a {
     color: #ff69b4; /* Pink color for the links */
     text-decoration: none;
     margin: 0 15px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-nav a:hover {
-    color: #ff1493; /* Darker pink on hover */
-}
 
 section {
     padding: 50px 20px;

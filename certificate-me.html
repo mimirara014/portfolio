@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body class="certificate-page">
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Navigation Bar -->
   <div class="button-bar">
     <a href="index.html" class="logo-link">
       <img src="mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo" />
@@ -23,33 +23,42 @@
     <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>
   </div>
 
-  <!-- Certifications Section -->
   <main class="certification-me">
     <h2 class="namecert">CERTIFICATIONS</h2>
-
+  
     <section id="certifications">
       <div class="cert-grid">
-
-        <!-- Certificate 1 -->
         <div class="cert-card">
-          <img src="ppt.png" alt="PowerPoint Certification" class="cert-img" />
+          <a href="mospp.png" data-lightbox="certifications" data-title="Microsoft Office Specialist: PowerPoint Associate (Office 2019)">
+            <img src="mospp.png" alt="PowerPoint Certification" class="cert-img" />
+          </a>
           <div class="cert-info">
             <h3>Microsoft Office Specialist: PowerPoint Associate (Office 2019)</h3>
-            <p>Skilled in creating dynamic presentations and utilizing advanced features in Microsoft PowerPoint 2019 to enhance content delivery.</p>
           </div>
         </div>
-
-        <!-- Certificate 2 -->
+  
         <div class="cert-card">
-          <img src="word.png" alt="Word Certification" class="cert-img" />
+          <a href="mosword.png" data-lightbox="certifications" data-title="Microsoft Office Specialist: Word Associate (Office 2019)">
+            <img src="mosword.png" alt="Word Certification" class="cert-img" />
+          </a>
           <div class="cert-info">
             <h3>Microsoft Office Specialist: Word Associate (Office 2019)</h3>
-            <p>Proficient in creating, formatting, and editing documents using Microsoft Word 2019, with expertise in advanced features for professional content creation.</p>
           </div>
         </div>
-
+  
+        <div class="cert-card">
+          <a href="javacert.png" data-lightbox="certifications" data-title="Java Foundation Certification: Course Completion">
+            <img src="javacert.png" alt="Java Foundation Certification" class="cert-img" />
+          </a>
+          <div class="cert-info">
+            <h3>Java Foundation Certification: Course Completion</h3>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

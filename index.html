@@ -5,46 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Mira Mae Medilo</title>
-
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
-
 </head>
 
 <body>
-   
-            
   <canvas id="bg-canvas"></canvas>
   
   <section id="home">
     <div class="flex-container">
       <div class="text-section">
         <h1 id="animated-name">
-            <span>M</span><span>i</span><span>r</span><span>a</span><span> </span>
-            <span>M</span><span>a</span><span>e</span><span> </span>
-            <span>M</span><span>e</span><span>d</span><span>i</span><span>l</span><span>o</span>
-          </h1>
+          <span>M</span><span>i</span><span>r</span><span>a</span><span> </span>
+          <span>M</span><span>a</span><span>e</span><span> </span>
+          <span>M</span><span>e</span><span>d</span><span>i</span><span>l</span><span>o</span>
+        </h1>
         
         <div class="nes-container with-title is-centered">
           <p class="title">Hi!</p>
-          <p>
-            I'm an aspiring app developer with a passion for web and mobile development.
-          </p>
+          <p>I'm an aspiring app developer with a passion for web and mobile development.</p>
         </div>
         <div class="buttons">
-            <button type="button" class="nes-btn is-primary retro-click" onclick="location.href='about-me.html'">About Me</button>
-            <button type="button" class="nes-btn is-success retro-click" onclick="location.href='tech-stack.html'">Tech Stack</button>
-            <button type="button" class="nes-btn is-warning retro-click" onclick="location.href='certificate-me.html'">Certificate</button>
-            <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>          </div>
-          </div>
+          <button type="button" class="nes-btn is-primary retro-click" onclick="location.href='about-me.html'">About Me</button>
+          <button type="button" class="nes-btn is-success retro-click" onclick="location.href='tech-stack.html'">Tech Stack</button>
+          <button type="button" class="nes-btn is-warning retro-click" onclick="location.href='certificate-me.html'">Certificate</button>
+          <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>
+        </div>
+      </div>
 
       <div class="image-section">
         <img src="pf.jpg" alt="My Profile Picture" class="profile-pic" />
       </div>
     </div>
   </section>
-
 
   <script>
     const logo = document.getElementById('logo');
@@ -57,14 +51,13 @@
   <script>
     anime({
       targets: '#animated-name span',
-      translateY: [-50, 0],   // from -50px to 0
-      opacity: [0, 1],        // fade in
-      delay: anime.stagger(100), // animate one letter at a time
+      translateY: [-50, 0],  
+      opacity: [0, 1],       
+      delay: anime.stagger(100), 
       duration: 1000,
       easing: 'easeOutBounce'
     });
   </script>
-  
   <script src="script.js"></script>
 </body>
 </html>

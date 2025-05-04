@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tech Stack</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="tech-stack">
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+  
+    <!-- Fixed Button Bar -->
+    <div class="button-bar">
+        <a href="index.html" class="logo-link">
+            <img src="mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo">
+        </a>
+        <button type="button" class="nes-btn is-primary retro-click" onclick="location.href='about-me.html'">About Me</button>
+        <button type="button" class="nes-btn is-success retro-click" onclick="location.href='tech-stack.html'">Tech Stack</button>
+        <button type="button" class="nes-btn is-warning retro-click" onclick="location.href='certificate-me.html'">Certificate</button>
+        <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>
+    </div>
 
-    <nav>
-        <a href="about-me.html">About Me</a>
-        <a href="tech-stack.html">Tech Stack</a>
-        <a href="contact-me.html">Contact Me</a>
-    </nav>
-
-    <section id="tech-stack">
-        <div class="profile-container">
-            <h2>My Tech Stack</h2>
-s
-            <p>I specialize in web development, with experience in front-end and back-end technologies like HTML, CSS, JavaScript, Node.js, and React.</p>
+    <section id="techstack" class="container">
+        <h2 class="nametech">Tech Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <img src="javaScript.png" alt="JavaScript" class="tech-icon">
+                <p class="nes-btn">JavaScript</p>
+            </div>
+            <div class="tech-item">
+                <img src="java.png" alt="Java" class="tech-icon">
+                <p class="nes-btn">Java</p>
+            </div>
+            <div class="tech-item">
+                <img src="android.png" alt="Android" class="tech-icon">
+                <p class="nes-btn">Android</p>
+            </div>
+            <div class="tech-item">
+                <img src="c_prog.png" alt="C Programming" class="tech-icon">
+                <p class="nes-btn">C</p>
+            </div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2025 Medilo Mira | Portfolio</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

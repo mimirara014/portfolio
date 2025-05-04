@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Me - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Certifications - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="certificate-page">
+  <canvas id="bg-canvas"></canvas>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tech-stack.html">Tech Stack</a>
-        <a href="contact-me.html">Contact Me</a>
-    </nav>
+  <!-- Navigation Bar -->
+  <div class="button-bar">
+    <a href="index.html" class="logo-link">
+      <img src="mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo" />
+    </a>
+    <button type="button" class="nes-btn is-primary retro-click" onclick="location.href='about-me.html'">About Me</button>
+    <button type="button" class="nes-btn is-success retro-click" onclick="location.href='tech-stack.html'">Tech Stack</button>
+    <button type="button" class="nes-btn is-warning retro-click" onclick="location.href='certificate-me.html'">Certificate</button>
+    <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>
+  </div>
 
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>Hi! I'm a passionate developer with experience in various technologies. I enjoy creating clean, efficient code and solving problems. In my free time, I love exploring new tools and frameworks to expand my skills.</p>
+  <!-- Certifications Section -->
+  <main class="certification-me">
+    <h2 class="namecert">CERTIFICATIONS</h2>
+
+    <section id="certifications">
+      <div class="cert-grid">
+
+        <!-- Certificate 1 -->
+        <div class="cert-card">
+          <img src="ppt.png" alt="PowerPoint Certification" class="cert-img" />
+          <div class="cert-info">
+            <h3>Microsoft Office Specialist: PowerPoint Associate (Office 2019)</h3>
+            <p>Skilled in creating dynamic presentations and utilizing advanced features in Microsoft PowerPoint 2019 to enhance content delivery.</p>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="cert-card">
+          <img src="word.png" alt="Word Certification" class="cert-img" />
+          <div class="cert-info">
+            <h3>Microsoft Office Specialist: Word Associate (Office 2019)</h3>
+            <p>Proficient in creating, formatting, and editing documents using Microsoft Word 2019, with expertise in advanced features for professional content creation.</p>
+          </div>
+        </div>
+
+      </div>
     </section>
-
-    <footer>
-        <p>&copy; 2025 Mira Mae Medilo | Portfolio</p>
-    </footer>
-
+  </main>
 </body>
 </html>

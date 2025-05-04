@@ -13,17 +13,23 @@
 </head>
 
 <body>
-
+   
+            
   <canvas id="bg-canvas"></canvas>
   
   <section id="home">
     <div class="flex-container">
       <div class="text-section">
-        <h2 class="name">Mira Mae Medilo</h2>
+        <h1 id="animated-name">
+            <span>M</span><span>i</span><span>r</span><span>a</span><span> </span>
+            <span>M</span><span>a</span><span>e</span><span> </span>
+            <span>M</span><span>e</span><span>d</span><span>i</span><span>l</span><span>o</span>
+          </h1>
+        
         <div class="nes-container with-title is-centered">
           <p class="title">Hi!</p>
           <p>
-            "I'm an aspiring app developer with a passion for web and mobile development. I'm dedicated to creating innovative solutions and continuously learning new skills to build efficient and impactful applications."
+            I'm an aspiring app developer with a passion for web and mobile development.
           </p>
         </div>
         <div class="buttons">
@@ -47,6 +53,18 @@
       setTimeout(() => logo.classList.remove('active'), 300);
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+    anime({
+      targets: '#animated-name span',
+      translateY: [-50, 0],   // from -50px to 0
+      opacity: [0, 1],        // fade in
+      delay: anime.stagger(100), // animate one letter at a time
+      duration: 1000,
+      easing: 'easeOutBounce'
+    });
+  </script>
+  
   <script src="script.js"></script>
 </body>
 </html>

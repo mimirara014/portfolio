@@ -1,78 +1,190 @@
-body {
-    font-family: 'Press Start 2P', 'Roboto Mono', monospace; /* NES-style font first */
-    background-color: #fff;
+/* Reset and canvas setup */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    color: #333;
+    font-family: 'Press Start 2P', cursive;
+    background: transparent;
+    overflow: hidden;
+  
+}
+.about-page {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: transparent;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
 }
 
+/* Main Section */
+section {
+    padding: 50px 20px;
+    background-color: transparent;
+    color: #333;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Navigation */
 nav {
-    background-color: #000; 
+    background-color: #333;
     padding: 20px;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 10;
 }
 
 nav a {
-    color: #ff69b4; 
+    color: #ff69b4;
     text-decoration: none;
     margin: 0 15px;
 }
 
-section {
-    padding: 50px 20px;
-    background-color: #f0f0f0; 
-    color: #333; 
-    text-align: center;
+/* Flex container to center content */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
 }
 
-h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #000; 
+.text-section {
+    max-width: 500px;
+    text-align: wrap;
 }
 
-#about-me {
-    background-color: #ffe0f0; 
+/* Name styling */
+.name {
+    font-size: 2.5rem;
+    background-color: transparent;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    align-self: flex-start;
 }
 
-#tech-stack {
-    background-color: #ffccff; 
+/* Container for the buttons */
+.nes-container {
+    margin-top: 1rem;
+    background-color: aliceblue;
 }
 
-#contact-me {
-    background-color: #ffe0f0; 
-}
-
-#home img {
-    display: block;
-    margin: 20px auto;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ff69b4; 
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-footer {
-    background-color: #000; 
-    text-align: center;
-    padding: 10px;
-    color: #fff; 
-    position: relative;
-    bottom: 0;
+/* Buttons under text */
+.buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: nowrap;
     width: 100%;
 }
 
-footer p {
-    font-size: 14px;
+/* Align buttons horizontally */
+.nes-btn {
+    font-family: 'Press Start 2P', monospace;
+    padding: 0.5rem 1.5rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Retro pixel-style bounce effect for buttons */
+@keyframes button-bounce {
+    0%   { transform: scale(1); }
+    30%  { transform: scale(1.1); }
+    60%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.nes-btn.retro-click:active {
+    animation: button-bounce 0.2s ease-in-out;
+}
+
+/* Profile Image */
+.image-section .profile-pic {
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 100px;
+}
+/* ======================================================== */
+/* 🆕 Added Section Styles for Button Bar, Logo, and Message */
+/* ======================================================== */
+
+/* Buttons bar with logo on the left */
+.button-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+/* Logo link on the left side of button bar */
+.logo-link {
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+    margin-top: 150px;
+    gap: 2rem;
+    z-index: 5;
+    position: relative;
+}
+
+/* Message alignment */
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.message.-left {
+    flex-direction: row;
+}
+
+.message.-right {
+    flex-direction: row-reverse;
+}
+
+/* Optional: Chat balloon spacing */
+.nes-balloon.from-right{
+    max-width: 100%;
+    flex-direction: right;
 }

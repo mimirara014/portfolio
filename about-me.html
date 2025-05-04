@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Me - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="about-page">
+  <!-- Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tech-stack.html">Tech Stack</a>
-        <a href="contact-me.html">Contact Me</a>
-    </nav>
+  <!-- Fixed Button Bar -->
+  <div class="button-bar">
+    <a href="index.html" class="logo-link">
+      <img src="mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo">
+    </a>
+    <button type="button" class="nes-btn is-primary retro-click" onclick="location.href='about-me.html'">About Me</button>
+    <button type="button" class="nes-btn is-success retro-click" onclick="location.href='tech-stack.html'">Tech Stack</button>
+    <button type="button" class="nes-btn is-warning retro-click" onclick="location.href='certificate-me.html'">Certificate</button>
+    <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>
+  </div>
 
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>Hi! I'm a passionate developer with experience in various technologies. I enjoy creating clean, efficient code and solving problems. In my free time, I love exploring new tools and frameworks to expand my skills.</p>
+  <!-- Scrollable Main Content -->
+  <main class="about-me">
+    <section class="message -left">
+      <i class="nes-bcrikko"></i>
+      <div class="nes-balloon from-left">
+        <p>What's ABOUT YOU?</p>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Mira Mae Medilo | Portfolio</p>
-    </footer>
+    <section class="message -right">
+      <div class="nes-balloon from-right">
+        <p>I'm a second-year Information Technology student with a strong drive to learn and a passion for innovation. I thrive on exploring how technology shapes the world and am especially drawn to app development and digital design. Beyond programming, I enjoy experimenting with graphic design to bring creativity into the digital spaces I build.</p>
+      </div>
+      <i class="nes-bcrikko"></i>
+    </section>
 
+    <section class="message -left">
+      <i class="nes-bcrikko"></i>
+      <div class="nes-balloon from-left">
+        <p>What’s your professional aspiration?</p>
+      </div>
+    </section>
+
+    <section class="message -right">
+      <div class="nes-balloon from-right">
+        <p>Looking ahead, I aim to grow into a versatile app developer and designer who builds thoughtful, user-focused applications. I want to merge functionality with aesthetic appeal, creating solutions that not only work well but feel intuitive to use. As the tech landscape evolves, I’m dedicated to sharpening my skills and staying on top of new tools and trends.</p>
+      </div>
+      <i class="nes-bcrikko"></i>
+    </section>
+  </main>
 </body>
 </html>

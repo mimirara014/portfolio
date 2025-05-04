@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Correct position of Google Fonts link -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+
 </head>
+
 <body>
 
-    <nav>
-        <a href="about-me.html">About Me</a>
-        <a href="tech-stack.html">Tech Stack</a>
-        <a href="contact-me.html">Contact Me</a>
-    </nav>
-
-    <section id="home">
-        
-
-        <div class="profile-container">
-            <h2>Mira Mae Medilo</h2>
-            <img src="pf.jpg" alt="My Profile Picture">
-            <p></p>
-        </div>
+  <canvas id="bg-canvas"></canvas>
+  
+  <section id="home">
+    <div class="flex-container">
+      <div class="text-section">
+        <h2 class="name">Mira Mae Medilo</h2>
         <div class="nes-container with-title is-centered">
-            <p class="title">Hi!</p>
-            <p>"I'm an aspiring app developer with a passion for web and mobile development. I'm dedicated to 
-                creating innovative solutions and continuously learning new skills to build efficient and impactful applications."</p>
+          <p class="title">Hi!</p>
+          <p>
+            "I'm an aspiring app developer with a passion for web and mobile development. I'm dedicated to creating innovative solutions and continuously learning new skills to build efficient and impactful applications."
+          </p>
         </div>
-    </section>
+        <div class="buttons">
+            <button type="button" class="nes-btn is-primary" onclick="location.href='about-me.html'">About Me</button>
+            <button type="button" class="nes-btn is-success" onclick="location.href='tech-stack.html'">Tech Stack</button>
+            <button type="button" class="nes-btn is-warning" onclick="location.href='certificate-me.html'">Certificate</button>
+            <button type="button" class="nes-btn is-error" onclick="location.href='contact-me.html'">Contact</button>
+          </div>
+          </div>
 
-    <footer>
-        <p>&copy; 2025 Medilo Mira | Portfolio</p>
-    </footer>
+      <div class="image-section">
+        <img src="pf.jpg" alt="My Profile Picture" class="profile-pic" />
+      </div>
+    </div>
+  </section>
 
+
+  <script>
+    const logo = document.getElementById('logo');
+    logo.addEventListener('click', () => {
+      logo.classList.add('active');
+      setTimeout(() => logo.classList.remove('active'), 300);
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>

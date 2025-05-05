@@ -443,3 +443,30 @@ var width = window.innerWidth,
 for(var w = 0; w < boards; w++){
   tetrisInstances.push(new Tetris(20 * Math.round((w*bWidth)/20), 0, bWidth));
 }
+
+window.addEventListener('resize', () => {
+    let boardDiv = 20 * Math.round(window.innerWidth / 20);
+    let bWidth = boardDiv / boards;
+
+    tetrisInstances.forEach((tetris, index) => {
+        let newWidth = bWidth;
+        let newHeight = window.innerHeight;
+
+        tetris.width = newWidth;
+        tetris.height = newHeight;
+
+        tetris.bgCanvas.width = tetris.fgCanvas.width = newWidth;
+        tetris.bgCanvas.height = tetris.fgCanvas.height = newHeight;
+
+        tetris.bgCanvas.style.left = `${20 * Math.round((index * bWidth) / 20)}px`;
+        tetris.fgCanvas.style.left = `${20 * Math.round((index * bWidth) / 20)}px`;
+
+        tetris.bgCanvas.style.top = '0px';
+        tetris.fgCanvas.style.top = '0px';
+
+        tetris.boardWidth = Math.floor(newWidth / tetris.unitSize);
+        tetris.boardHeight = Math.floor(newHeight / tetris.unitSize);
+
+        tetris.init(); // re-initialize animation
+    });
+});

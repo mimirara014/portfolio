@@ -7,7 +7,7 @@ html, body {
     overflow: hidden;
 }
 
-.about-page, .tech-stack, .certificate-page {
+.about-page, .tech-stack, .certificate-page, .contact-mepage{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,4 +336,26 @@ section {
     display: inline-block;
     opacity: 0;
 }
+.contact-link {
+    /* Add or update styles for the renamed class */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
 
+.nes-icon {
+    font-size: 16rem; /* Adjust the size as needed */
+    width: 20rem; /* Optional: Ensure width matches font size */
+    height: 20rem; /* Optional: Ensure height matches font size */
+}
+.contact-link .nes-icon.github:hover {
+    filter: drop-shadow(0 0 10px rgba(255, 106, 245, 0.749)); /* Blue glow */
+    transition: filter 0.3s ease; /* Smooth transition */
+    
+}
+
+.contact-link .nes-icon.linkedin:hover {
+    filter: drop-shadow(0 0 10px rgba(0, 119, 181, 0.8)); /* LinkedIn blue glow */
+    transition: filter 0.3s ease; /* Smooth transition */
+}

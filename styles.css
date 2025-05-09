@@ -275,7 +275,7 @@ section {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 1rem 1rem;
 }
 
@@ -289,6 +289,7 @@ section {
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 1rem;
+    min-width: 280px;
     border-radius: 20px;
 }
 

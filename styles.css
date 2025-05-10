@@ -75,8 +75,10 @@ section {
 }
 
 .image-section {
-    margin-bottom: 2rem;
-    margin-top: 3.5rem; /* Increased margin top */
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #home {
@@ -92,17 +94,21 @@ section {
 
 .flex-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
     margin-top: 1rem;
     flex-wrap: wrap;
     padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .text-section {
     max-width: 500px;
     text-align: wrap;
+    flex: 1;
+    min-width: 300px;
 }
 
 .name {
@@ -161,6 +167,13 @@ section {
     height: 250px;
     object-fit: cover;
     display: block;
+    box-shadow: 0 0 20px rgba(60, 162, 246, 0.4);
+    transition: all 0.3s ease;
+}
+
+.image-section .profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 106, 245, 0.5);
 }
 
 .button-bar {
@@ -498,10 +511,12 @@ section {
     .flex-container {
         flex-direction: column-reverse;
         align-items: center;
+        gap: 1rem;
     }
 
     .text-section {
         text-align: center;
+        min-width: 100%;
     }
 
     .nametech, .namecert, .nameabout {
@@ -550,7 +565,7 @@ section {
     }
 
     .image-section {
-        margin-top: 1.5rem;
+        margin: 1rem 0;
     }
 
     .cert-modal-container {
@@ -559,5 +574,31 @@ section {
 
     .cert-modal-title {
         font-size: 0.6rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .flex-container {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .image-section {
+        margin: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .flex-container {
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .image-section {
+        margin-right: 0;
+    }
+
+    .text-section {
+        margin-left: 0;
     }
 }

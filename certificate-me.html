@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body class="certificate-page">
   <canvas id="bg-canvas"></canvas>
@@ -35,7 +34,7 @@
     <section id="certifications">
       <div class="cert-grid">
         <div class="cert-card">
-          <a href="msppt.png" data-lightbox="certifications" data-title="Microsoft Office Specialist: PowerPoint Associate (Office 2019)">
+          <a href="javascript:void(0);" class="cert-link" data-img="msppt.png" data-title="Microsoft Office Specialist: PowerPoint Associate (Office 2019)">
             <img src="msppt.png" alt="PowerPoint Certification" class="cert-img" />
           </a>
           <div class="cert-info">
@@ -44,7 +43,7 @@
         </div>
   
         <div class="cert-card">
-          <a href="msword.png" data-lightbox="certifications" data-title="Microsoft Office Specialist: Word Associate (Office 2019)">
+          <a href="javascript:void(0);" class="cert-link" data-img="msword.png" data-title="Microsoft Office Specialist: Word Associate (Office 2019)">
             <img src="msword.png" alt="Word Certification" class="cert-img" />
           </a>
           <div class="cert-info">
@@ -53,7 +52,7 @@
         </div>
   
         <div class="cert-card">
-          <a href="javacert.png" data-lightbox="certifications" data-title="Java Foundation Certification: Course Completion">
+          <a href="javascript:void(0);" class="cert-link" data-img="javacert.png" data-title="Java Foundation Certification: Course Completion">
             <img src="javacert.png" alt="Java Foundation Certification" class="cert-img" />
           </a>
           <div class="cert-info">
@@ -62,16 +61,24 @@
         </div>
 
         <div class="cert-card">
-          <a href="newcert.jpg" data-lightbox="certifications" data-title="Information Technology Specialist : Databases (2025)">
+          <a href="javascript:void(0);" class="cert-link" data-img="newcert.jpg" data-title="Information Technology Specialist: Databases (2025)">
             <img src="newcert.jpg" alt="IT Specialist Databases" class="cert-img" />
           </a>
           <div class="cert-info">
-            <h3>Information Technology Specialist : Databases (2025)</h3>
+            <h3>Information Technology Specialist: Databases (2025)</h3>
           </div>
         </div>
       </div>
     </section>
   </main>
+  
+  <!-- Certificate Modal -->
+  <div class="cert-modal-overlay">
+    <div class="cert-modal-container">
+      <img src="" alt="Certificate" class="cert-modal-image" id="modal-image">
+      <p class="cert-modal-title" id="modal-title"></p>
+    </div>
+  </div>
   
   <script>
     const hamburger = document.querySelector('.hamburger-menu');
@@ -98,8 +105,39 @@
         buttonBar.classList.remove('active');
       }
     });
+    
+    // Certificate Modal Functionality
+    const modalOverlay = document.querySelector('.cert-modal-overlay');
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const certLinks = document.querySelectorAll('.cert-link');
+    
+    certLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const imgSrc = link.getAttribute('data-img');
+        const title = link.getAttribute('data-title');
+        
+        modalImage.src = imgSrc;
+        modalTitle.textContent = title;
+        modalOverlay.classList.add('active');
+      });
+    });
+    
+    // Close modal when clicking outside the image
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('active');
+      }
+    });
+    
+    // Allow ESC key to close the modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+        modalOverlay.classList.remove('active');
+      }
+    });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -9,11 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
-
 </head>
-<body class="contact-mepage"
+<body class="contact-mepage">
 
 <canvas id="bg-canvas"></canvas>
+
+<div class="hamburger-menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
 <div class="button-bar">
   <a href="index.html" class="logo-link">
     <img src="mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo">
@@ -31,18 +37,43 @@
             <div class="contact-link">
                 <a href="https://github.com/mimirara014" target="_blank" rel="noopener noreferrer">
                     <i class="nes-icon github is-large"></i>
-                  
                 </a>
             </div>
             <div class="contact-link">
                 <a href="https://www.linkedin.com/in/mira-mae-medilo-329211364/" target="_blank" rel="noopener noreferrer">
                     <i class="nes-icon linkedin is-large"></i>
-                   
                 </a>
             </div>
         </div>
     </section>
 </main>
+
+<script>
+  const hamburger = document.querySelector('.hamburger-menu');
+  const buttonBar = document.querySelector('.button-bar');
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    buttonBar.classList.toggle('active');
+  });
+  
+  const navButtons = document.querySelectorAll('.button-bar button');
+  navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        hamburger.classList.remove('active');
+        buttonBar.classList.remove('active');
+      }
+    });
+  });
+  
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      hamburger.classList.remove('active');
+      buttonBar.classList.remove('active');
+    }
+  });
+</script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -11,6 +11,13 @@
 </head>
 <body class="tech-stack">
     <canvas id="bg-canvas"></canvas>
+    
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
     <div class="button-bar">
         <a href="index.html" class="logo-link">
             <img src="mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo">
@@ -44,6 +51,33 @@
             </div>
         </section>
     </main>
+    
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const buttonBar = document.querySelector('.button-bar');
+        
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          buttonBar.classList.toggle('active');
+        });
+        
+        const navButtons = document.querySelectorAll('.button-bar button');
+        navButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+              hamburger.classList.remove('active');
+              buttonBar.classList.remove('active');
+            }
+          });
+        });
+        
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            buttonBar.classList.remove('active');
+          }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -13,6 +13,22 @@
 <body>
   <canvas id="bg-canvas"></canvas>
   
+  <div class="hamburger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <div class="button-bar">
+    <a href="index.html" class="logo-link">
+      <img src="mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo">
+    </a>
+    <button type="button" class="nes-btn is-primary retro-click" onclick="location.href='about-me.html'">About Me</button>
+    <button type="button" class="nes-btn is-success retro-click" onclick="location.href='tech-stack.html'">Tech Stack</button>
+    <button type="button" class="nes-btn is-warning retro-click" onclick="location.href='certificate-me.html'">Certificate</button>
+    <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>
+  </div>
+  
   <section id="home">
     <div class="flex-container">
       <div class="text-section">
@@ -45,6 +61,31 @@
     logo.addEventListener('click', () => {
       logo.classList.add('active');
       setTimeout(() => logo.classList.remove('active'), 300);
+    });
+    
+    const hamburger = document.querySelector('.hamburger-menu');
+    const buttonBar = document.querySelector('.button-bar');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      buttonBar.classList.toggle('active');
+    });
+    
+    const navButtons = document.querySelectorAll('.button-bar button');
+    navButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          buttonBar.classList.remove('active');
+        }
+      });
+    });
+    
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        buttonBar.classList.remove('active');
+      }
     });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>

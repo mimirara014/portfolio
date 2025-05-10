@@ -4,7 +4,8 @@ html, body {
     margin: 0;
     font-family: 'Press Start 2P', cursive;
     background: transparent;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .about-page, .tech-stack, .certificate-page, .contact-mepage{
@@ -75,15 +76,18 @@ section {
 
 .image-section {
     margin-bottom: 2rem;
+    margin-top: 3.5rem; /* Increased margin top */
 }
 
 #home {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 20px;
     background-color: transparent;
+    overflow-y: auto;
+    padding-top: 120px; /* Added padding top to account for the fixed navbar */
 }
 
 .flex-container {
@@ -91,7 +95,7 @@ section {
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     flex-wrap: wrap;
     padding: 2rem 1rem;
 }
@@ -482,5 +486,13 @@ section {
 
     .nes-balloon p {
         font-size: 0.7rem;
+    }
+
+    #home {
+        padding-top: 80px;
+    }
+
+    .image-section {
+        margin-top: 1.5rem;
     }
 }

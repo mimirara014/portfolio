@@ -471,7 +471,28 @@ section {
     margin-top: 15px;
 }
 
-/* Media Queries for Mobile Responsiveness */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .flex-container {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .image-section {
+        margin: 1.5rem;
+    }
+
+ 
+    .button-bar .nes-btn {
+        font-size: 0.6rem; 
+        padding: 0.4rem 1rem;
+    }
+
+    .nametech, .namecert, .nameabout {
+        font-size: 2rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .hamburger-menu {
         display: flex;

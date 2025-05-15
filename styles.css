@@ -287,7 +287,11 @@ section {
     width: 100px;
     height: 100px;
     object-fit: contain;
+    object-position: center;
     margin-bottom: 1rem;
+    background-color: white; 
+    padding: 0.5rem;         
+    border-radius: 10px;     
 }
 
 .tech-name {

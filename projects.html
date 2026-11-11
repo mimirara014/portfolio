@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Mira Mae Medilo | Projects</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+</head>
+<body class="projects-page">
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="hamburger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="button-bar">
+    <a href="index.html" class="logo-link">
+      <img src="images/mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo" />
+    </a>
+    <button type="button" class="nes-btn is-primary retro-click" onclick="location.href='about-me.html'">About Me</button>
+    <button type="button" class="nes-btn retro-click" onclick="location.href='projects.html'">Projects</button>
+    <button type="button" class="nes-btn is-success retro-click" onclick="location.href='tech-stack.html'">Tech Stack</button>
+    <button type="button" class="nes-btn is-warning retro-click" onclick="location.href='certificate-me.html'">Certificate</button>
+    <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>
+  </div>
+
+  <main class="projects-main">
+    <h2 class="nameproj">PROJECTS</h2>
+
+    <!-- PROJECT 1: ALERTO -->
+    <article class="project-showcase">
+      <div class="project-header">
+        <h3 class="project-title">ALERTO: Development of a Location-Based Alert System for Enhancing Commuter and Driver Safety and Security</h3>
+        <span class="nes-badge"><span class="is-primary">IOT AND CAPSTONE PROJECT</span></span>
+      </div>
+
+      <div class="project-bento-grid">
+        <!-- Left Column: Media + Team & Role -->
+        <div class="project-col">
+          <div class="nes-container is-rounded project-box">
+            <div class="project-media-pair">
+              <div class="media-item">
+                <img src="images/alerto-presentation.jpg" alt="ALERTO Capstone Presentation" class="proj-media" />
+                <p class="media-caption">Capstone Presentation</p>
+              </div>
+              <div class="media-item">
+                <video controls class="proj-media" preload="metadata">
+                  <source src="images/alerto-demo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <p class="media-caption">IoT Module &amp; App Demo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="nes-container is-rounded project-box">
+            <p class="meta-label">TEAM MEMBERS:</p>
+            <p class="meta-value">Antonio, Princess Fiona &bull; Dolera, Nathalie &bull; Jomoc, Justine &bull; Medilo, Mira Mae</p>
+
+            <p class="meta-label">MY ROLE:</p>
+            <p class="meta-role">Hardware Lead</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Description + Technologies -->
+        <div class="project-col">
+          <div class="nes-container with-title is-rounded project-box">
+            <p class="title">Description</p>
+            <p class="project-text">
+              ALERTO combines an anti-theft bag device and a mobile application into one complete safety ecosystem. The system is designed to help commuters stay alert near their destinations, protect their personal belongings from theft, monitor travel safety, and provide continuous emergency connectivity.
+            </p>
+          </div>
+
+          <div class="nes-container with-title is-rounded project-box">
+            <p class="title">Technologies &amp; Components Used</p>
+            <p class="project-text">
+              <strong>Hardware &amp; IoT Components:</strong> ESP32-S3 Microcontroller, Neo-M8N GPS Module, Air780E 4G LTE/GSM Module, MPU6050 Motion Sensor, Magnetic Reed Switch, LDR (Light) Sensor, Active Buzzer, Vibration Motor, and Custom 3D-Printed Enclosure.
+            </p>
+            <p class="project-text">
+              <strong>Software, APIs &amp; Cloud:</strong> C / C++ (Firmware), React Native &amp; Expo, MapLibre Native &amp; OpenFreeMap, Google Gemini AI (OCR), TomTom Traffic API, Next.js &amp; Vercel (Admin), MongoDB Atlas &amp; Prisma, iProg SMS Gateway, and Bluetooth Low Energy (BLE).
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 2: LIGTAS SUNDO -->
+    <article class="project-showcase">
+      <div class="project-header">
+        <h3 class="project-title">Ligtas Sundo: QR Code and RFID with SMS Notifications and Cloud Storage for Noveca Day Care Student Dismissal</h3>
+        <span class="nes-badge"><span class="is-success">PROJECT MANAGEMENT</span></span>
+      </div>
+
+      <div class="project-bento-grid">
+        <!-- Left Column: Media + Team & Role -->
+        <div class="project-col">
+          <div class="nes-container is-rounded project-box">
+            <div class="project-media-pair">
+              <div class="media-item">
+                <img src="images/ligtas-sundo-dashboard.jpg" alt="Ligtas Sundo Teacher Dashboard and QR RFID Cards" class="proj-media" />
+                <p class="media-caption">Web Dashboard &amp; RFID/QR Cards</p>
+              </div>
+              <div class="media-item">
+                <img src="images/ligtas-sundo-team.jpg" alt="Ligtas Sundo Presentation" class="proj-media" />
+                <p class="media-caption">Project Defense &amp; Team</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="nes-container is-rounded project-box">
+            <p class="meta-label">TEAM MEMBERS:</p>
+            <p class="meta-value">Antonio, Princess Fiona &bull; Dolera, Nathalie &bull; Jomoc, Justine &bull; Medilo, Mira Mae</p>
+
+            <p class="meta-label">MY ROLE:</p>
+            <p class="meta-role">Frontend Developer</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Description + Technologies -->
+        <div class="project-col">
+          <div class="nes-container with-title is-rounded project-box">
+            <p class="title">Description</p>
+            <p class="project-text">
+              Ligtas Sundo is a student arrival and dismissal monitoring system built for Noveleta Child Development Center (Noveca Day Care). By scanning dual QR Code and RFID student/fetcher ID cards, the system verifies authorized guardians in real time, logs attendance to the cloud, and dispatches instant SMS notifications to parents upon pickup.
+            </p>
+          </div>
+
+          <div class="nes-container with-title is-rounded project-box">
+            <p class="title">Technologies &amp; Components Used</p>
+            <p class="project-text">
+              <strong>Hardware &amp; Identification:</strong> RFID Scanner Module, QR Code Camera Scanner, and Custom RFID/QR Student &amp; Fetcher ID Cards.
+            </p>
+            <p class="project-text">
+              <strong>Software, Frontend &amp; Cloud:</strong> Responsive Web Teacher Dashboard (HTML, CSS, JavaScript), Real-Time Attendance &amp; Fetcher Verification UI, SMS Notification Gateway Integration, and Cloud Database Storage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const buttonBar = document.querySelector('.button-bar');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      buttonBar.classList.toggle('active');
+    });
+    
+    const navButtons = document.querySelectorAll('.button-bar button');
+    navButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          buttonBar.classList.remove('active');
+        }
+      });
+    });
+    
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        buttonBar.classList.remove('active');
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

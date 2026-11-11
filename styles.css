@@ -8,7 +8,7 @@ html, body {
     overflow-y: auto;
 }
 
-.about-page, .tech-stack, .certificate-page, .contact-mepage{
+.about-page, .tech-stack, .certificate-page, .contact-mepage, .projects-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,12 +84,13 @@ section {
 #home {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 140px 20px 60px 20px;
     background-color: transparent;
     overflow-y: auto;
-    padding-top: 120px; /* Added padding top to account for the fixed navbar */
+    gap: 3rem;
 }
 
 .flex-container {
@@ -102,6 +103,198 @@ section {
     padding: 2rem 1rem;
     width: 100%;
     max-width: 1200px;
+}
+
+/* Home Highlights Section */
+.highlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1100px;
+    z-index: 5;
+}
+
+.highlight-card {
+    background-color: rgba(240, 248, 255, 0.95) !important;
+    width: 420px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem !important;
+    box-shadow: 0 8px 20px rgba(60, 162, 246, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(255, 106, 245, 0.65);
+}
+
+.highlight-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center top;
+    border: 4px solid #000;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.highlight-caption {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.85rem;
+    color: #270a26;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Projects Page (2-Column Bento Layout in Retro NES Style) */
+.projects-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1250px;
+    z-index: 5;
+    padding-bottom: 4rem;
+}
+
+.nameproj {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.project-showcase {
+    width: 100%;
+    background: radial-gradient(circle, rgba(238, 174, 202, 0.88) 0%, rgba(148, 227, 233, 0.85) 100%);
+    border: 4px solid #000;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 3.5rem;
+    box-shadow: 0 10px 25px rgba(60, 162, 246, 0.45);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-showcase:hover {
+    box-shadow: 0 12px 30px rgba(255, 106, 245, 0.7);
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    color: #1a1a2e;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-header .nes-badge {
+    width: auto;
+    min-width: 260px;
+    font-size: 0.7rem;
+}
+
+.project-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+.project-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.project-box {
+    background-color: rgba(240, 248, 255, 0.96) !important;
+    margin-top: 0 !important;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem !important;
+}
+
+.project-media-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.media-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.proj-media {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border: 3px solid #000;
+    border-radius: 10px;
+    background-color: #000;
+    margin-bottom: 0.75rem;
+}
+
+.media-caption {
+    font-size: 0.65rem;
+    color: #270a26;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.meta-label {
+    font-size: 0.7rem;
+    color: #555;
+    margin: 0.5rem 0 0.35rem 0;
+}
+
+.meta-value {
+    font-size: 0.75rem;
+    color: #111;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.meta-role {
+    font-size: 0.9rem;
+    color: #d61e3c;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.project-text {
+    font-size: 0.72rem;
+    line-height: 1.85;
+    color: #222;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.project-text:last-child {
+    margin-bottom: 0;
 }
 
 .text-section {
@@ -141,7 +334,6 @@ section {
     flex-wrap: nowrap;
     width: 100%;
 }
-
 
 @keyframes button-bounce {
     0%   { transform: scale(1); }
@@ -186,7 +378,7 @@ section {
 }
 
 .logo-link {
-    margin-right: 100px;
+    margin-right: 60px;
     display: flex;
     align-items: center;
 }
@@ -270,7 +462,7 @@ section {
 }
 
 .tech-item {
-      width: 120px;
+    width: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -288,6 +480,7 @@ section {
     padding: 0.5rem;         
     border-radius: 10px;     
 }
+
 .custom-btn {
     font-family: 'Press Start 2P', cursive;
     font-size: 0.60rem;
@@ -475,24 +668,17 @@ section {
     margin-top: 15px;
 }
 
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .flex-container {
-        padding: 1rem;
-        gap: 2rem;
+@media screen and (max-width: 1024px) {
+    .project-bento-grid {
+        grid-template-columns: 1fr;
     }
 
-    .image-section {
-        margin: 1.5rem;
-    }
-
- 
     .button-bar .nes-btn {
         font-size: 0.6rem; 
-        padding: 0.4rem 1rem;
+        padding: 0.4rem 0.8rem;
     }
 
-    .nametech, .namecert, .nameabout {
+    .nametech, .namecert, .nameabout, .nameproj {
         font-size: 2rem;
     }
 }
@@ -507,7 +693,7 @@ section {
         align-items: center;
         justify-content: flex-start;
         padding-top: 60px;
-        gap: 1.5rem;
+        gap: 1.25rem;
         height: 100vh;
         width: 100%;
         transform: translateX(100%);
@@ -521,18 +707,12 @@ section {
 
     .logo-link {
         margin-right: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .logo {
         width: 80px;
         height: 80px;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
     }
 
     .flex-container {
@@ -546,10 +726,26 @@ section {
         min-width: 100%;
     }
 
-    .nametech, .namecert, .nameabout {
-        font-size: 1.8rem;
+    .nametech, .namecert, .nameabout, .nameproj {
+        font-size: 1.6rem;
         margin-top: 5rem;
         text-align: center;
+    }
+
+    .project-showcase {
+        padding: 1rem;
+    }
+
+    .project-title {
+        font-size: 0.85rem;
+    }
+
+    .project-media-pair {
+        grid-template-columns: 1fr;
+    }
+
+    .proj-media, .highlight-img {
+        height: 200px;
     }
 
     .tech-grid, .cert-grid {
@@ -595,23 +791,16 @@ section {
         margin: 1rem 0;
     }
 
+    .highlight-caption {
+        font-size: 0.7rem;
+    }
+
     .cert-modal-container {
         padding: 10px;
     }
 
     .cert-modal-title {
         font-size: 0.6rem;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .flex-container {
-        padding: 1rem;
-        gap: 2rem;
-    }
-
-    .image-section {
-        margin: 1.5rem;
     }
 }
 

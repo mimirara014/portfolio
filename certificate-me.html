@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Mira Mae Medilo | Certification </title>
+  <title>Mira Mae Medilo | Certification</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
@@ -23,6 +23,7 @@
       <img src="images/mmmlogohome.png" alt="Logo" class="logo retro-click" id="logo" />
     </a>
     <button type="button" class="nes-btn is-primary retro-click" onclick="location.href='about-me.html'">About Me</button>
+    <button type="button" class="nes-btn retro-click" onclick="location.href='projects.html'">Projects</button>
     <button type="button" class="nes-btn is-success retro-click" onclick="location.href='tech-stack.html'">Tech Stack</button>
     <button type="button" class="nes-btn is-warning retro-click" onclick="location.href='certificate-me.html'">Certificate</button>
     <button type="button" class="nes-btn is-error retro-click" onclick="location.href='contact-me.html'">Contact</button>
@@ -33,6 +34,51 @@
   
     <section id="certifications">
       <div class="cert-grid">
+        <div class="cert-card">
+          <a href="javascript:void(0);" class="cert-link" data-img="images/its-ai.png" data-title="Information Technology Specialist: Artificial Intelligence (2026)">
+            <img src="images/its-ai.png" alt="IT Specialist Artificial Intelligence" class="cert-img" />
+          </a>
+          <div class="cert-info">
+            <h3>Information Technology Specialist: Artificial Intelligence (2026)</h3>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <a href="javascript:void(0);" class="cert-link" data-img="images/cisco-iot.png" data-title="Cisco Networking Academy: Introduction to IoT and Digital Transformation (2026)">
+            <img src="images/cisco-iot.png" alt="Introduction to IoT and Digital Transformation" class="cert-img" />
+          </a>
+          <div class="cert-info">
+            <h3>Cisco Networking Academy: Introduction to IoT and Digital Transformation (2026)</h3>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <a href="javascript:void(0);" class="cert-link" data-img="images/cisco-packet-tracer.png" data-title="Cisco Networking Academy: Getting Started with Cisco Packet Tracer (2026)">
+            <img src="images/cisco-packet-tracer.png" alt="Getting Started with Cisco Packet Tracer" class="cert-img" />
+          </a>
+          <div class="cert-info">
+            <h3>Cisco Networking Academy: Getting Started with Cisco Packet Tracer (2026)</h3>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <a href="javascript:void(0);" class="cert-link" data-img="images/newcert.jpg" data-title="Information Technology Specialist: Databases (2025)">
+            <img src="images/newcert.jpg" alt="IT Specialist Databases" class="cert-img" />
+          </a>
+          <div class="cert-info">
+            <h3>Information Technology Specialist: Databases (2025)</h3>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <a href="javascript:void(0);" class="cert-link" data-img="images/javacert.png" data-title="Java Foundation Certification: Course Completion">
+            <img src="images/javacert.png" alt="Java Foundation Certification" class="cert-img" />
+          </a>
+          <div class="cert-info">
+            <h3>Java Foundation Certification: Course Completion</h3>
+          </div>
+        </div>
+
         <div class="cert-card">
           <a href="javascript:void(0);" class="cert-link" data-img="images/msppt.png" data-title="Microsoft Office Specialist: PowerPoint Associate (Office 2019)">
             <img src="images/msppt.png" alt="PowerPoint Certification" class="cert-img" />
@@ -48,24 +94,6 @@
           </a>
           <div class="cert-info">
             <h3>Microsoft Office Specialist: Word Associate (Office 2019)</h3>
-          </div>
-        </div>
-  
-        <div class="cert-card">
-          <a href="javascript:void(0);" class="cert-link" data-img="images/javacert.png" data-title="Java Foundation Certification: Course Completion">
-            <img src="images/javacert.png" alt="Java Foundation Certification" class="cert-img" />
-          </a>
-          <div class="cert-info">
-            <h3>Java Foundation Certification: Course Completion</h3>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <a href="javascript:void(0);" class="cert-link" data-img="images/newcert.jpg" data-title="Information Technology Specialist: Databases (2025)">
-            <img src="images/newcert.jpg" alt="IT Specialist Databases" class="cert-img" />
-          </a>
-          <div class="cert-info">
-            <h3>Information Technology Specialist: Databases (2025)</h3>
           </div>
         </div>
       </div>
@@ -124,14 +152,12 @@
       });
     });
     
-    // Close modal when clicking outside the image
     modalOverlay.addEventListener('click', (e) => {
       if (e.target === modalOverlay) {
         modalOverlay.classList.remove('active');
       }
     });
     
-    // Allow ESC key to close the modal
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
         modalOverlay.classList.remove('active');
